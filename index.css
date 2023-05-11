@@ -1,8 +1,12 @@
+/* reset */
 body {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-size: 12px;
+  line-height: 1.4;
   font-family: "Kumbh Sans", sans-serif;
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  color: hsl(237, 12%, 33%);
 }
 
 ul {
@@ -10,26 +14,32 @@ ul {
   padding-left: 0px;
 }
 
+p {
+  margin: 0.4rem 0;
+}
+
+/* css code for application */
 #container {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
 section {
   position: relative;
-  max-width: 1000px;
+  max-width: 65%;
   height: 500px;
   display: flex;
   background-color: #fff;
   border-radius: 20px;
+  box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.2);
 }
 
 .image-group {
   overflow: hidden;
   position: relative;
-  width: 70%;
 }
 #img-bg {
   transform: scale(0.8) translateX(-560px) translateY(-380px);
@@ -47,7 +57,55 @@ section {
 }
 
 .desc {
-  padding: 70px;
+  padding: 2rem 4rem;
+  width: 90%;
+}
+#title {
+  font-size: 2rem;
+  color: hsl(237, 12%, 33%);
+}
+
+.faq-item {
+  padding: 0.5rem;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  overflow: hidden;
+}
+
+.question-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.question:hover {
+  color: hsl(14, 88%, 65%);
+  transition: 0.3s;
+}
+
+.is-open .question {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+  transition: 0.3s;
+}
+.is-open .arrow-btn {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+.is-open .answer {
+  display: block;
+  transition: 0.3s;
+}
+
+.arrow-btn {
+  width: 10px;
+  height: 10px;
+  margin-right: 1rem;
+}
+.answer {
+  display: none;
+  max-height: 56px;
+  overflow: auto;
+  color: hsl(240, 6%, 50%);
 }
 
 .attribution {
