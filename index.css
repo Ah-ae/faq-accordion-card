@@ -22,6 +22,7 @@ p {
 #container {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -29,7 +30,7 @@ p {
 
 section {
   position: relative;
-  max-width: 65%;
+  max-width: 75%;
   height: 500px;
   display: flex;
   background-color: #fff;
@@ -68,7 +69,6 @@ section {
 .faq-item {
   padding: 0.5rem;
   border-bottom: 1px solid hsl(240, 5%, 91%);
-  overflow: hidden;
 }
 
 .question-area {
@@ -89,7 +89,7 @@ section {
 }
 .is-open .arrow-btn {
   transform: rotate(180deg);
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .is-open .answer {
   display: block;
@@ -100,6 +100,7 @@ section {
   width: 10px;
   height: 10px;
   margin-right: 1rem;
+  transition: 0.2s;
 }
 .answer {
   display: none;
@@ -108,10 +109,53 @@ section {
   color: hsl(240, 6%, 50%);
 }
 
+.mobile-image-group {
+  display: none;
+}
+
 .attribution {
-  font-size: 11px;
+  margin-top: 4rem;
+  font-size: 0.8rem;
   text-align: center;
+  color: #fff;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    min-width: 85%;
+    height: 60%;
+    transform: translateY(2rem);
+  }
+
+  .mobile-image-group {
+    display: inline-block;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-60%);
+  }
+  #mobile-img-bg {
+    position: absolute;
+    top: 60%;
+    left: 3%;
+  }
+  .image-group,
+  .img-box-wrapper {
+    display: none;
+  }
+
+  .desc {
+    padding: 6rem 0.8rem 1rem 0.8rem;
+  }
+  #title {
+    text-align: center;
+  }
+  .arrow-btn {
+    margin-right: 0;
+  }
 }
