@@ -129,13 +129,19 @@
     </div>
 
     <script>
-      const questionToggle = document.querySelectorAll(".question-area");
-      const toggleMenu = (e) => {
-        e.currentTarget.closest(".faq-item").classList.toggle("is-open");
-      };
+      const faqItems = document.querySelectorAll(".faq-item");
 
-      questionToggle.forEach((e) => {
-        e.addEventListener("click", toggleMenu);
+      faqItems.forEach((item) => {
+        const question = item.querySelector(".question-area");
+
+        question.addEventListener("click", () => {
+          faqItems.forEach((faqItem) => {
+            if (faqItem !== item) {
+              faqItem.classList.remove("is-open");
+            }
+          });
+          item.classList.toggle("is-open");
+        });
       });
     </script>
   </body>
