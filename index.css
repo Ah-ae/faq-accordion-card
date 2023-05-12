@@ -133,16 +133,18 @@ section {
 
   .mobile-image-group {
     display: inline-block;
-    width: 80%;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%) translateY(-60%);
   }
+  #mobile-img-main {
+    min-width: 280px;
+  }
   #mobile-img-bg {
     position: absolute;
     top: 60%;
-    left: 3%;
+    min-width: 280px;
   }
   .image-group,
   .img-box-wrapper {
@@ -150,7 +152,7 @@ section {
   }
 
   .desc {
-    padding: 6rem 0.8rem 1rem 0.8rem;
+    padding: 8rem 0.8rem 1rem 0.8rem;
   }
   #title {
     text-align: center;
