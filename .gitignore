@@ -17,6 +17,5 @@
 .prettierignore
 
 # assets
-README-template.md
-README.md
+instruction.md
 style-guide.md
