@@ -177,8 +177,6 @@ section {
     margin: 0.3rem 0;
   }
   .attribution {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 1rem;
+    display: none;
   }
 }
